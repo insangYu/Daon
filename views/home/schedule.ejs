@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- scheduler -->
+    <script src="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler.js" 
+        charset="utf-8"></script>
+  <link href="https://cdn.dhtmlx.com/scheduler/edge/dhtmlxscheduler_material.css" 
+        rel="stylesheet" type="text/css" charset="utf-8">
+    <style>
+        html, body{
+            margin:0px;
+            padding:0px;
+            height:100%;
+        }
+
+    </style>
+    <% include ../partials/head %>
+  </head>
+
+  <body>
+      
+      <% include ../partials/nav %>
+    <% include ../partials/schedulenav %>
+
+    <div id="scheduler_here" class="dhx_cal_container" 
+    style='width:80%; height:100%; margin: 80px 0 80px 10%; border-style:solid; border-width:thin; border-color:rgb(190, 185, 185);'>
+    <div class="dhx_cal_navline">
+        <div class="dhx_cal_prev_button">&nbsp;</div>
+        <div class="dhx_cal_next_button">&nbsp;</div>
+        <div class="dhx_cal_today_button"></div>
+        <div class="dhx_cal_date"></div>
+        <div class="dhx_cal_tab" name="day_tab"></div>
+        <div class="dhx_cal_tab" name="week_tab"></div>
+        <div class="dhx_cal_tab" name="month_tab"></div>
+    </div>
+    <div class="dhx_cal_header"></div>
+    <div class="dhx_cal_data"></div>
+</div>
+
+<script>
+    // set format of dates in the data source
+    scheduler.config.xml_date="%Y-%m-%d %H:%i";
+    scheduler.init('scheduler_here', new Date(2018,0,20), "week");
+
+    scheduler.load("http://localhost:3000/data", "json");
+
+    var dp = new dataProcessor("http://localhost:3000/data");
+    // use RESTful API on the backend
+    dp.setTransactionMode("REST");
+    dp.init(scheduler);
+</script>
+    <% include ../partials/footer %>
+  </body>
+  </html>

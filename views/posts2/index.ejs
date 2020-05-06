@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <% include ../partials/head %>
+  </head>
+  <body>
+      <% include ../partials/nav %>
+      <% include ../partials/communitynav %>
+
+      <br>
+      <br>
+    <li style="margin-left: 4%"><a href="../posts/index" >낭포섬 섬유증</a></li>
+    <li style="margin-left: 4%"><a href="../posts1/index" >고셔병</a></li>
+    <li style="margin-left: 4%"><a href="../posts2/index" >헌팅턴병</a></li>
+
+    <div class="container post post-index">
+<br>
+      <div class="buttons">
+        <% if(isAuthenticated){ %>
+          <a class="btn btn-secondary py-2 px-3" href="/posts2/new">글쓰기</a>
+        <% } %>
+      </div>
+
+      <table class="table table-striped posts">
+        <thead>
+          <tr>
+            <th class="title">제목</th>
+            <th class="author">작성자</th>
+            <th class="date">작성 날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if(posts2 == null || posts2.length == 0){ %>
+            <tr>
+              <td class="noData" colspan=100> There is no data to show :( </td>
+            </tr>
+          <% } %>
+          <% posts2.forEach(function(post2) { %>
+            <tr>
+              <td class="title">
+                <a href="/posts2/<%= post2._id %>"><div class="ellipsis"><%= post2.title %></div></a>
+              </td>
+              <td class="author">
+                <div class="ellipsis"><%= post2.author ? post2.author.username : "" %></div>
+              </td>
+              <td class="date">
+                <%= post2.createdDate %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+    </div>  <!-- container end -->
+    <% include ../partials/footer %>
+
+  </body>
+</html>

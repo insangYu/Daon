@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <% include ../partials/head %>
+      <style rel="stylesheet">
+       
+        
+       
+        body .container1 {
+          position: relative;
+          overflow: hidden;
+          width: 1000px;
+          height: 800px;
+          margin: 80px auto 0;
+          background-color: #ffffff;
+          -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+        }
+        body .container1 .half {
+          float: left;
+          width: 50%;
+          height: 100%;
+          padding: 58px 40px 0;
+        }
+        body .container1 .half.bg {
+          background-image: url("https://cdn.icon-icons.com/icons2/1749/PNG/512/38_113706.png");
+          margin-top: 300px;
+          
+          background-size: 300px;
+          background-repeat: no-repeat;
+        }
+        body .container1 h1 {
+          font-size: 35px;
+          font-weight: 700;
+          margin-bottom: 23px;
+          text-align: center;
+          text-indent: 6px;
+          letter-spacing: 7px;
+          text-transform: uppercase;
+          color: #263238;
+        }
+        body .container1 .tabs {
+          width: 100%;
+          margin-bottom: 29px;
+          border-bottom: 1px solid #d9d9d9;
+        }
+        body .container1 .tabs .tab {
+          display: inline-block;
+          margin-bottom: -1px;
+          padding: 20px 15px 10px;
+          cursor: pointer;
+          letter-spacing: 0;
+          border-bottom: 1px solid #d9d9d9;
+          -moz-user-select: -moz-none;
+          -ms-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
+          transition: all 0.1s ease-in-out;
+        }
+        body .container1 .tabs .tab a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #d9d9d9;
+          transition: all 0.1s ease-in-out;
+          font-size: 20px;
+        }
+        body .container1 .tabs .tab.active a, body .container .tabs .tab:hover a {
+          font-size: 20px;
+          color: #263238;
+        }
+        body .container1 .tabs .tab.active {
+          border-bottom: 1px solid #263238;
+        }
+        body .container1 .content form {
+          position: relative;
+          height: 500px;
+        }
+        body .container1 .content label:first-of-type, body .container1 .content input:first-of-type, body .container1 .content .more:first-of-type {
+          -moz-animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+          -webkit-animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+          animation: slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1);
+        }
+        body .container1 .content label:nth-of-type(2), body .container1 .content input:nth-of-type(2), body .container1 .content .more:nth-of-type(2) {
+          -moz-animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+          -webkit-animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+          animation: slideIn 0.5s cubic-bezier(0.37, 0.82, 0.2, 1);
+        }
+        body .container1 .content label:nth-of-type(3), body .container1 .content input:nth-of-type(3), body .container1 .content .more:nth-of-type(3) {
+          -moz-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+          -webkit-animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+          animation: slideIn 0.6s cubic-bezier(0.37, 0.82, 0.2, 1);
+        }
+        body .container1 .content label {
+          font-size: 12px;
+          color: #263238;
+          -moz-user-select: -moz-none;
+          -ms-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
+        }
+        body .container1 .content label:not([for='remember']) {
+          display: none;
+        }
+        body .container1 .content input.inpt {
+          font-size: 20px;
+          display: inline-block;
+          width: 60%;
+          height: 42px;
+          margin-bottom: 12px;
+          padding: 16px 13px;
+          
+          border: 1px solid #d9d9d9;
+          background: transparent;
+          -moz-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+        }
+        body .container1 .content input.inpt::-webkit-input-placeholder {
+          font-size: 20px;
+          color: #999999;
+          font-family: 'Lato', sans-serif;
+        }
+        body .container1 .content input.inpt:-moz-placeholder {
+          font-size: 20px;
+          color: #999999;
+          font-family: 'Lato', sans-serif;
+        }
+        body .container1 .content input.inpt::-moz-placeholder {
+          font-size: px;
+          color: #999999;
+          font-family: 'Lato', sans-serif;
+        }
+        body .container1 .content input.inpt:-ms-input-placeholder {
+          font-size: 14px;
+          color: #999999;
+          font-family: 'Lato', sans-serif;
+        }
+        body .container1 .content input.inpt:focus {
+          border-color: #999999;
+        }
+        body .container1 .content input.submit {
+          font-size: 12px;
+          line-height: 42px;
+          display: block;
+          width: 100%;
+          height: 42px;
+          cursor: pointer;
+          vertical-align: middle;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #263238;
+          border: 1px solid #263238;
+          background: transparent;
+          -moz-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+        }
+        body .container1 .content input.submit:hover {
+          background-color: #263238;
+          color: #ffffff;
+          -moz-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+        body .container1 .content input:focus {
+          outline: none;
+        }
+        body .container1 .content .checkbox {
+          margin-top: 4px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          width: 0;
+          height: 0;
+          margin: 17px -1px;
+          padding: 0;
+          border: 0;
+        }
+        body .container1 .content .checkbox + label {
+          vertical-align: middle;
+          display: inline-block;
+          width: 50%;
+        }
+        body .container1 .content .checkbox + label:before {
+          content: "\A";
+          color: #999999;
+          font-family: Verdana;
+          font-weight: bold;
+          font-size: 8px;
+          line-height: 10px;
+          text-align: center;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          -moz-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+          background: transparent;
+          border: 1px solid #d9d9d9;
+          width: 11px;
+          height: 11px;
+          margin: -2px 8px 0 0;
+        }
+        body .container1 .content .checkbox:checked + label:before {
+          content: "✓";
+        }
+        body .container1 .content .submit-wrap {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        }
+        body .container1 .content .submit-wrap a {
+          font-size: 12px;
+          display: block;
+          margin-top: 20px;
+          text-align: center;
+          text-decoration: none;
+          color: #999999;
+        }
+        body .container1 .content .submit-wrap a:hover {
+          text-decoration: underline;
+        }
+        body .container1 .content .signup-cont {
+          display: none;
+        }
+        
+        @keyframes slideIn {
+          0% {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            margin-left: -320px;
+          }
+          100% {
+            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+            opacity: 1;
+            margin-left: 0px;
+          }
+        }
+        @-webkit-keyframes slideIn {
+          0% {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            margin-left: -320px;
+          }
+          100% {
+            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+            opacity: 1;
+            margin-left: 0px;
+          }
+        }
+        .credits {
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          color: #999999;
+          font-size: 14px;
+          margin: 0 10px 10px 0;
+        }
+        .credits a {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+          opacity: 0.8;
+          color: inherit;
+          font-weight: 700;
+          text-decoration: none;
+        }
+        
+        </style>
+      
+  </head>
+  <body>
+      <% include ../partials/nav %>
+      <% include ../partials/medicinenav %>
+
+      <section class="container1">
+		    <article class="half">
+			        <h1>복용 중인 약 체크하기</h1>
+			        <div class="tabs">
+				            <span class="tab signin active"><a href="#signin">복용 중인 약 등록</a></span>
+				            <span class="tab signup"><a href="#signup">측정</a></span>
+			        </div>
+			        <div class="content">
+				            <div class="signin-cont cont">
+                          <form action="../posts/showmedicine" method="post" enctype="multipart/form-data">
+                                <strong style="font-size: 18px;">의약품명</strong><br>
+                                <input type="text" name="medicinename" class="inpt" id="medicinename"><br>
+                                <strong style="font-size: 18px;">복용 빈도(중복 선택)</strong><br>
+                                <input type="radio" name="frequency1" id="frequency1">매일&nbsp
+                                <input type="radio" name="frequency2" id="frequency2" value="매시간">매시간&nbsp
+                                <input type="radio" name="frequency3" id="frequency3" value="월">월&nbsp
+                                <input type="radio" name="frequency4" id="frequency4" value="화">화&nbsp
+                                <input type="radio" name="frequency5" id="frequency5" value="수">수&nbsp
+                                <input type="radio" name="frequency6" id="frequency6" value="목">목&nbsp
+                                <input type="radio" name="frequency7" id="frequency7" value="금">금&nbsp
+                                <input type="radio" name="frequency8" id="frequency8" value="토">토&nbsp
+                                <input type="radio" name="frequency9" id="frequency9" value="일">일<br>
+                                
+                                  <input type="radio" name="frequency10" id="frequency10"  >기타
+                                  <input type="text" name="frequency10" id="frequency10" ><br><br>
+                                
+                                  <strong style="font-size: 18px;">복용 기간</strong><br>
+                                  
+                                <input type="date" class="inpt" name="date1" id="date1"><span style="display: inline"  >&nbsp&nbsp 까지</span><br>
+                                </span>
+                                <strong style="font-size: 18px;">복용 시간</strong><br>
+                                <input type="time" name="time1" id="time1" class="inpt">
+                                
+						                    
+						                    <div class="submit-wrap">
+							                        <input type="submit" value="등록" class="submit" style="font-size:20px">
+							                        
+						                    </div>
+        					        </form>
+    				        </div>
+    				        <div class="signup-cont cont">
+                <form action="../posts/showmedicine" method="post" enctype="multipart/form-data">
+
+                  <strong style="font-size: 18px;">혈압</strong><br>
+                  <input type="text" name="pressure" class="inpt" id="pressure" >&nbsp&nbsp mmHg<br>
+                  <strong style="font-size: 18px;">휴식시 심박수</strong><br>
+                  <input type="text" name="Heartrate" class="inpt" id="Heartrate" >&nbsp&nbsp bpm<br>
+                  <strong style="font-size: 18px;">체중</strong><br>
+                  <input type="text" name="weight" class="inpt" id="weight">&nbsp&nbsp kg<br>
+                  <strong style="font-size: 18px;">혈당(식사 전)</strong><br>
+                  <input type="text" name="sugar1" class="inpt" id="sugar1">&nbsp&nbsp mg/dl or mmol/l<br>
+                  <strong style="font-size: 18px;">혈당(식사 후)</strong><br>
+                  <input type="text" name="sugar2" class="inpt" id="sugar2">&nbsp&nbsp mg/dl or mmol/l<br>
+
+						                    <div class="submit-wrap">
+							                        <input type="submit" value="등록" class="submit" style="font-size:20px">
+							                        
+						                    </div>
+        					        </form>
+            </div>
+			        </div>
+		    </article>
+		    <div class="half bg"></div>
+  </section>
+  <br>
+  <br>
+  <br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script type="text/javascript">
+$('.tabs .tab').click(function(){
+    if ($(this).hasClass('signin')) {
+        $('.tabs .tab').removeClass('active');
+        $(this).addClass('active');
+        $('.cont').hide();
+        $('.signin-cont').show();
+    } 
+    if ($(this).hasClass('signup')) {
+        $('.tabs .tab').removeClass('active');
+        $(this).addClass('active');
+        $('.cont').hide();
+        $('.signup-cont').show();
+    }
+});
+$('.container .bg').mousemove(function(e){
+    var amountMovedX = (e.pageX * -1 / 30);
+    var amountMovedY = (e.pageY * -1 / 9);
+    $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+});
+</script>
+            
+    <% include ../partials/footer %>
+
+  </body>
+</html>

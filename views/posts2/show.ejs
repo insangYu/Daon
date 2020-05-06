@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/nav %>
+        <% include ../partials/communitynav %>
+
+    <div class="container post post-show">
+
+      <div class="buttons">
+        <% if(isAuthenticated && post2.author && currentUser.id == post2.author.id){ %>
+          <br>
+          <a class="btn btn-secondary py-2 px-3" href="/posts2/<%= post2._id %>/edit">수정</a>
+          <br>
+          
+        <% } %>
+      </div>
+      <br>
+      <br>
+
+
+      <div class="contentBox">
+        <h3 class="contentBoxTop"><%= post2.title %></h3>
+        <div class="row">
+          <div class="col-sm-4 col-sm-push-8">
+            <div class="post-info">
+              
+          </div> <!-- col end-->
+          <div class="col-sm-8 col-sm-pull-4">
+            <div class="post-body"><%= post2.body %></div>
+          </div> <!-- col end-->
+        </div> <!-- row end -->
+      </div> <!-- post-container end -->
+      
+    </div> <!-- container end -->
+    <% include ../partials/footer %>
+  </body>
+</html>

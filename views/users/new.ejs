@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+		<% include ../partials/nav %>
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">회원가입</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Sing up <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-6 py-5 pr-md-5">
+	          <div class="heading-section heading-section-white ftco-animate mb-5">
+	          	<span class="subheading">회원가입</span>
+	            <h2 class="mb-4">다온 시작하기</h2>
+	            <p>좋은 모든 것들이 다 온다.</p>
+	          </div>
+	          <form action="../users" method="post" class="appointment-form ftco-animate">
+								<div class="d-md-flex">
+										<div class="form-group <%= (errors.username)?'has-error':'' %>">
+											<input type="text" id="username" name="username" class="form-control" value="<%= user.username %>" placeholder="아이디">
+										</div>
+									</div>
+									<div class="d-md-flex">
+											<div class="form-group">
+												<input type="password" id="password" name="password" class="form-control" placeholder="비밀번호">
+											</div>
+											<div class="form-group">
+													<input type="password" id="passwordConfirmation" name="passwordConfirmation" class="form-control" placeholder="비밀번호 확인">
+												</div>
+										</div>
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<input type="text" type="text" id="name" name="name" class="form-control" value="<%= user.name %>" placeholder="이름">
+		    				</div>
+										<div class="form-group">
+											<div class="form-field">
+												<div class="select-wrap">
+													<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+													<select name="sex" id="sex" class="form-control">
+														<option value="" style="color: #000000">성별</option>
+														<option value="여자" style="color: #000000">여자</option>
+														<option value="남자" style="color: #000000">남자</option>
+													</select>
+											</div>
+										</div>
+									</div>
+							</div>
+	    				<div class="d-md-flex">
+	    					<div class="form-group">
+		    					<div class="form-field">
+          					<div class="select-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="region" id="region" class="form-control">
+                      	<option value="" style="color: #000000">지역</option>
+                        <option value="서울" style="color: #000000">서울</option>
+												<option  value="경기" style="color: #000000">경기</option>
+												<option value="인천" style="color: #000000">인천</option>
+                        <option value="강원" style="color: #000000">강원</option>
+                        <option value="대전" style="color: #000000">대전</option>
+												<option value="충북" style="color: #000000">충북</option>
+												<option value="충남" style="color: #000000">충남</option>
+                        <option value="전북" style="color: #000000">전북</option>
+												<option value="전남" style="color: #000000">전남</option>
+												<option value="광주" style="color: #000000">광주</option>
+												<option value="경북" style="color: #000000">경북</option>
+                        <option value="경남" style="color: #000000">경남</option>
+												<option value="울산" style="color: #000000">울산</option>
+												<option value="대구" style="color: #000000">대구</option>
+												<option value="부산" style="color: #000000">부산</option>
+                        <option value="제주" style="color: #000000">제주</option>
+                      </select>
+                    </div>
+		              </div>
+		    				</div>
+	    					<div class="form-group ml-md-4">
+		    					<input type="text" name="phonenum" id="phonenum" value="<%= user.phonenum %>" class="form-control" placeholder="전화번호">
+		    				</div>
+	    				</div>
+	    				<div class="d-md-flex">
+		    				<div class="form-group">
+		    					<div class="input-wrap">
+		            		<div class="icon"><span class="ion-md-calendar"></span></div>
+		            		<input type="text" name="birth" id="birth" class="form-control appointment_date" placeholder="생년월일">
+	            		</div>
+		    				</div>
+							</div>
+	    				<div class="d-md-flex">
+									<div class="form-group">
+											<div class="form-field">
+												<div class="select-wrap">
+													<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+													<select type="text" name="membertype" id="membertype" class="form-control">
+														<option value="" style="color: #000000">회원유형</option>
+														<option value="환자" style="color: #000000">환자</option>
+														<option value="보호자" style="color: #000000">보호자</option>
+														<option value="의사" style="color: #000000">의사</option>
+													</select>
+											</div>
+										</div>
+									</div>
+		            <div class="form-group ml-md-4">
+		              <input type="submit" value="가입하기" class="btn btn-secondary py-3 px-4">
+		            </div>
+	    				</div>
+						</form>
+						</div>
+
+    			<div class="col-lg-6 p-5 bg-counter aside-stretch">
+						<h3 class="vr">About다온</h3>
+    				<div class="row pt-4 mt-1">
+		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 p-5 bg-light">
+		              <div class="text">
+		                <strong class="number" data-number="1">0</strong>
+		                <span>다온의 시작</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 p-5 bg-light">
+		              <div class="text">
+		                <strong class="number" data-number="4507">0</strong>
+		                <span>등록된 환자 수</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 p-5 bg-light">
+		              <div class="text">
+		                <strong class="number" data-number="84">0</strong>
+		                <span>등록된 의사 수</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 p-5 bg-light">
+		              <div class="text">
+		                <strong class="number" data-number="8724">0</strong>
+		                <span>등록된 사용자</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+					</div>
+					</div>
+				</div>
+		</section>
+
+		<% include ../partials/footer %>
+  
+</body>
+</html>

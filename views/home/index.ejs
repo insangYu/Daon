@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+<body>
+
+			<% include ../partials/nav %>
+		
+<style>
+/*----------------------------------------------------*/
+/* Home Banner Area css
+============================================================================================ */
+.home_banner_area {
+  z-index: 1;
+  min-height: 650px;
+  display: flex;
+  background: url(../images/to.jpg) no-repeat scroll center center;
+  background-size: cover; }
+  .home_banner_area .banner_inner {
+    width: 100%;
+    display: flex; }
+    .home_banner_area .banner_inner .container {
+      vertical-align: middle;
+      align-self: center; }
+    .home_banner_area .banner_inner .banner_content {
+      color: #fff; }
+      .home_banner_area .banner_inner .banner_content h2 {
+        margin-top: 0px;
+        font-size: 45px;
+        font-weight: 500;
+        
+        line-height: 50px;
+        color: #fff; }
+      .home_banner_area .banner_inner .banner_content p {
+        max-width: 680px;
+        font-size: 16px;
+        margin: 25px 0px 45px; }
+        @media (max-width: 991px) {
+          .home_banner_area .banner_inner .banner_content p {
+            max-width: 460px; } }
+
+
+/* End Home Banner Area css
+============================================================================================ */
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+	</style>
+    <!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+			<div class="banner_inner">
+				<div class="container">
+					<div class="banner_content">
+						<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+							<div class="col-md-6 text ftco-animate">
+								<h1 class="mb-4">모든 좋은일이<span style="color:#007bff;"> 다 온</span>다</h1>
+								<h3 class="subheading">항상 희망과 웃음이 함께 하길 기도합니다</h3>
+								<p><a href="../about" class="btn btn-secondary px-4 py-3 mt-3">자세히 보기</a></p>
+							</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--================ End Home Banner Area =================-->
+    
+		
+<section>
+		<div class="container">
+				<div class="row blog">
+						<div class="col-md-12">
+								<div id="blogCarousel" class="carousel slide" data-ride="carousel">
+                    <section class="carousel-indicators">
+										<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center">
+												<input type="image" alt="Image" src="images/lone-way.png"  style="width:50px;" data-target="#blogCarousel"  data-slide-to="0" class="active">
+												<br>
+												<input type="image" alt="Image" src="images/rone-way.png" style="width:50px;" data-target="#blogCarousel" data-slide-to="1">
+							
+									</section>
+
+										<!-- Carousel items -->
+										<div class="carousel-inner">
+
+												<div class="carousel-item active">
+														<div class="row">
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/z.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/b.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/c.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/v.jpg" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+														</div>
+														<!--.row-->
+												</div>
+												<!--.item-->
+
+												<div class="carousel-item">
+														<div class="row">
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/v.jpg" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/z.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/b.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+																<div class="col-md-3">
+																		<a href="#">
+																				<img src="images/c.png" alt="Image" style="max-width:100%;">
+																		</a>
+																</div>
+														</div>
+														<!--.row-->
+												</div>
+												<!--.item-->
+
+										</div>
+										<!--.carousel-inner-->
+								</div>
+								<!--.Carousel-->
+
+						</div>
+				</div>
+</div>
+<script>
+// optional
+$('#blogCarousel').carousel({
+interval: 5000
+});
+</script>
+		<section class="ftco-section ftco-no-pt ftc-no-pb">
+			<div class="container">
+					<div id="colorlib-about">
+							<div class="container">
+								<div class="row">
+									
+									<div class="col-md-7- col-md-push-1">
+										<h2>간편 클릭 바로가기</h2>
+										<p>
+										간편 클릭 바로가기를 통해 질환 정보 보기, 질환자 신청하기, 의료비지원 바로가기 메뉴를 이용해 보세요.
+										</p>
+										<!--링크부분-->
+											<div class="fancy-collapse-panel">
+															<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+															 <div class="panel panel-default"><!--링크 타이틀부분과 눌렀을때 열린부분까지 포함하는 패널-->
+																	 <div class="panel-heading" role="tab" id="headingOne">
+																			 <h4 class="panel-title"><!--링크 타이틀-->
+																					 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">희귀질환정보 보기</span></a>
+																			 </h4>
+																	 </div>
+		
+																	 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+																			 <div class="panel-body">
+																			<li>희귀질환명, 영향부위, 증상, 원인 등 상세한 질환정보를 볼 수 있습니다. </li>
+																					 <p align="right">
+																					 <button onclick="window.location.href='http://helpline.nih.go.kr/cdchelp/ph/rdiz/selectRdizInfList.do?menu=A0100'" style="color: green" >바로가기</button>
+																					 </p>
+																					</div>
+																				</div>
+																			 </div>
+																	 </div>
+		
+															 </div>
+															 <div class="panel panel-default">
+																	 <div class="panel-heading" role="tab" id="headingTwo">
+																			 <h4 class="panel-title">
+																					 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >희귀질환지정 신청하기</a>
+																			 </h4>
+																	 </div>
+		
+																	 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+																			 <div class="panel-body">
+																					 <li>신규 (극)희귀질환 지정을 신청 할 수 있으며, 신청정보 및 진행상태를 조회할 수 있습니다. </li>
+																					 <p align="right">
+																					 <button onclick="window.location.href='http://helpline.nih.go.kr/cdchelp/ph/rdiz/selectRdizRecpCndList.do?menu=A0201'" style="color: green" >바로가기</button>
+																					 </p>
+																			 </div>
+																	 </div>
+															 </div>
+															 <div class="panel panel-default">
+																	 <div class="panel-heading" role="tab" id="headingThree">
+																			 <h4 class="panel-title">
+																					 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">의료비지원사업 보기</a>
+																			 </h4>
+																	 </div>
+																	 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+																			 <div class="panel-body">
+																				<li>지속적인 치료가 필요하여 의료비 부담이 많은 일부 희귀질환자에게 의료비를 지원하고 있습니다. </li>
+																				<p align="right">
+																				<button onclick="window.location.href='http://helpline.nih.go.kr/cdchelp/ph/ptlcontents/selectPtlConSent.do?schSno=110&menu=B0101'" style="color: green" >바로가기</button>
+																				</p>	
+																			 </div>
+																	 </div>
+															 </div>
+														</div>
+												 </div>
+									</div>
+								</div>
+							</div>
+						</div>
+			</div>
+		</section>
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">의학사전</span>
+            <h2 class="mb-4">다온위키</h2>
+            <p>다온위키에 대한 의학전문가의 한마디</p>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-8">
+            <div class="carousel-testimony owl-carousel">
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/준희.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>베체트병의(Behcet's disease) 정확한 발병 원인은 밝혀지지 않았지만, 오래 전부터 유전적인 소인이 있는 환자에서
+											환경적인 요인이 더해지면서 면역 반응이 활성화되고, 그 결과 여러 가지 증상이 나타난다고 판단하고 있습니다.
+										</p>
+                    <p class="name">Dr.이준희</p>
+                    <span class="position">전북대학교병원 소아청소년과</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/민지.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>모야모야병(Moyamoya disease)으로 인해 이차적으로 나는 두통을 치료하기 위해서 아스피린만 투약하면 완치될 가능성이 높다고 하셨는데, 
+											의학 전문인 소견으로는 어느 정도 효과는 볼 수 있으나 완치 확률이 높다라고 보기에는 어렵습니다.</p>
+                    <p class="name">Dr.김민지</p>
+                    <span class="position">세브란스 소아신경외과</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/취업한인상.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>크로이츠펠트-야콥병(Cruetzfeldt-Jakob disease)의 대표적인 증상으로는 치매, 성격변화, 시력저하 등이 있지만 개개인마다 차이가 있을 수 있습니다.
+											특히나 병원 내원을 하셔서 검사 받아보는 것을 추천드립니다.
+										</p>
+                    <p class="name">Dr.유인상</p>
+                    <span class="position">전북대학교병원 신경외과</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap d-flex">
+                  <div class="user-img mr-4" style="background-image: url(images/지원.jpg)">
+                  </div>
+                  <div class="text ml-2 bg-light">
+                  	<span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                    <p>다초점 섬유경화증(Multifocal fibrosclerosis)의 치료 목표는 진행을 막으며 재발을 줄이는 것입니다. 
+											스테로이드(Glucocorticosteroid)를 통해 관해를 유도 및 유지합니다. 재발할 경우 타 약제를 사용해볼 수도 있습니다.</p>
+                    <p class="name">Dr.최지원</p>
+                    <span class="position">구로병원 정형외과</span>
+                  </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</section>
+		
+		<section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+          	<span class="subheading">다온캘린더</span>
+            <h2 class="mb-4">최근 커뮤니티 모임</h2>
+            <p>새로 등록된 모임에 참여해 보세요 <br>자세히 보기를 눌러 모임을 확인해 보세요 </p>
+          </div>
+        </div>
+				<div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/x.png');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">17일</span>
+                  <span class="mos">5월</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">뮤코다당증 제 3회 정기 모임</a></h3>
+                <p>17년부터 시작한 정기 모임으로 현재 20명의 회원이 있습니다. 함께 정보 교류를 할 수 있는 기회가 되었으면 좋겠습니다.<br><br></p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">자세히 보기 <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">신청인원</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 7</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/z.png');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">23일</span>
+                  <span class="mos">5월</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">헌팅턴병 제 5차 세미나</a></h3>
+                <p>이번 세미나에서는 조직 운영 위원회 구성을 하고, 비영리 법인 설립 준비, 기부금 활용 방안 등에 대해 논의하려고 합니다. 많은 분들의 참여 부탁드립니다. </p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">자세히 보기 <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">신청인원</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 9</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+              <a href="blog-single.html" class="block-20" style="background-image: url('images/v.jpg');">
+								<div class="meta-date text-center p-2">
+                  <span class="day">25일</span>
+                  <span class="mos">6월</span>
+                  <span class="yr">2019</span>
+                </div>
+              </a>
+              <div class="text bg-white p-4">
+                <h3 class="heading"><a href="#">모야모야, 모여모여 10차 정기 모임</a></h3>
+                <p>이번 10차 모임을 통해 다시 한번 결의를 다지고 힘을 나누는 시간이 되었으면 합니다. 새롭게 참석을 희망 하시는 분들은 따로 연락주시면 감사드리겠습니다. </p>
+                <div class="d-flex align-items-center mt-4">
+	                <p class="mb-0"><a href="#" class="btn btn-primary">자세히 보기 <span class="ion-ios-arrow-round-forward"></span></a></p>
+	                <p class="ml-auto mb-0">
+	                	<a href="#" class="mr-2">신청인원</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+		<div class="col-8" style="margin: auto;">
+		<div class="bannerf">
+				<div class="slidebanner">
+					<input class="ban_left" type="image" src="images/left-arrow.png">
+					<input class="ban_right" type="image" src="images/right-arrow.png">
+				</div>
+				<div class="RollDiv">  
+					<div>
+							<a href="http://www.mohw.go.kr/" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_0" src="images/nord.PNG" alt="보건복지부">
+									<script>
+											fn_chgImg('banner_0' ,'KZ0T9gH0fUcjacFLGMWukw==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+											</script>
+								</span>
+							</a>
+						
+							<a href="http://helpline.nih.go.kr/cdchelp/index.jsp/" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_1" src="images/helpline.png" alt="NIH 국립보건연구원">
+									<script>
+									fn_chgImg('banner_1' ,'3dscFQM0yax0cYwNq0LY1g==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+						
+							<a href="http://www.koicd.kr/Main.do" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_2" src="images/koicd.PNG" alt="희귀질환 진단치료기술 연구지원센터">
+									<script>
+									fn_chgImg('banner_2' ,'ctwXd+oHy0Xz+0hzaE5Aog==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+						
+							<a href="http://www.nih.go.kr/" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_3" src="images/질병관리본부.jpg" alt="NORD 미국 희귀질환단체">
+									<script>
+									fn_chgImg('banner_3' ,'k8EDYWcNBdsnxXZRNxMpIw==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+						
+							<a href="https://raredisorders.ca" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_4" src="images/cord.png" alt="CORD 캐나다 희귀질환단체">
+									<script>
+									fn_chgImg('banner_4' ,'nJyaIBVGn7bXn7l1QkoU1A==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+						
+							<a href="http://www.orpha.net" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_5" src="images/orphanet.jpg" alt="orphanet 희귀질환 데이터 베이스">
+									<script>
+									fn_chgImg('banner_5' ,'78P8krUAvq5/54kygBDAyQ==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+						
+							<a href="http://www.eurordis.org/" target="_blank" rel="noopener noreferrer" title="새 창으로 이동">
+								<span>
+									<img id="banner_6" src="images/eurordis.png" alt="EURORDIS 유럽희귀질환">
+									<script>
+									fn_chgImg('banner_6' ,'ZeI6rF2/WGTEhPM6y7ZXPQ==' ,'O9gduY9ZPUtmFy0lVYAlzA==');
+									</script>
+								</span>
+							</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		
+		<% include ../partials/footer %>
+    
+  </body>
+</html>

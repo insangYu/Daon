@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <% if(isAuthenticated){ %>
+        <p class="button-custom order-lg-last mb-0"><a href="/<%= currentUser.username %>" class="btn btn-secondary py-2 px-3">내 정보</a></p>
+        <p class="button-custom order-lg-last mb-0"><a href="/logout" class="btn btn-secondary py-2 px-3">로그아웃</a></p>
+        <% } else { %>
+        <p class="button-custom order-lg-last mb-0"><a href="/login" class="btn btn-secondary py-2 px-3">로그인</a></p>
+        <p class="button-custom order-lg-last mb-0"><a href="/new" class="btn btn-secondary py-2 px-3">회원가입</a></p>
+        <% } %>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item"><a href="/" class="nav-link pl-0">홈</a></li>
+            <li class="nav-item"><a href="../about" class="nav-link">About다온</a></li>
+            <li class="nav-item"><a href="../dictionary" class="nav-link">의학사전</a></li>
+            <li class="nav-item"><a href="../posts/index" class="nav-link">커뮤니티</a></li>
+            <li class="nav-item"><a href="../calendar" class="nav-link">다온캘린더</a></li>
+            <li class="nav-item"><a href="../chat" class="nav-link">1:1 채팅</a></li>
+            <li class="nav-item active"><a href="search" class="nav-link">환자프로필</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav><!-- END nav -->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+
+    <% include ../partials/nav %>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/to.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">로그인</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>log in <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-color: blue;">
+      <div class="container home home-login">
+        <div class="row">
+        <div class="col-md-6- py-5 pr-md-">
+            <div class="heading-section heading-section-white ftco-animate mb-5">
+        <form class="login-form form-horizontal" action="/login" method="post">
+          <div class="contentBox">
+            <span class="contentBoxTop subheading">로그인</span>
+            <h2 class="mb-4">다온 시작하기</h2>
+            <p>좋은 모든 것들이 다 온다.</p>
+            </div>
+            <fieldset>
+              <div class="d-md-flex" style="color: cornsilk">
+              <div class="form-group  <%= (errors.username)?'has-error':'' %>">
+                <label for="username" class="control-label">아이디</label>
+                <div class="form-group ml-md-4">
+                  <input class="form-control" type="text" id="username" name="username" value="<%= username %>">
+                  <% if(errors.username){ %>
+                    <span class="help-block"><%= errors.username %></span>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+            <div class="d-md-flex" style="color: cornsilk">
+              <div class="form-group<%= (errors.password)?'has-error':'' %>">
+                <label for="password" class="control-label">비밀번호</label>
+                <div class="form-group ml-md-4">
+                  <input class="form-control" type="password" id="password" name="password" value="">
+                  <% if(errors.password){ %>
+                    <span class="help-block"><%= errors.password %></span>
+                  <% } %>
+                </div>
+              </div>
+              </div>
+              <% if(errors.login){ %>
+                <div class="has-error">
+                  <span class="help-block"><%= errors.login %></span>
+                </div>
+              <% } %>
+            </fieldset>
+          </div>
+          
+          <div class="buttons form-group ml-md-4">
+            <input class="btn btn-secondary py-3 px-4" type="submit" value="로그인">
+          
+        </div>
+        </form>
+        </div>
+      </div> 
+      </div>
+    </section><!-- container end -->
+    <% include ../partials/footer %>
+
+  </body>
+</html>

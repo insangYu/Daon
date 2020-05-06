@@ -1,0 +1,86 @@
+
+ <!--================ Start Header Menu Area =================-->
+        <header class="header_area">
+                <div class="header-top">
+                        <div class="container">
+                            <div class="row align-items-center">
+                               
+                                <div class="col-lg-9 col-sm-6 col-8 header-top-right">
+
+                                        <% if(isAuthenticated){ %>
+                                            <p class="button-custom order-lg-last mb-0"><a href="../users/<%= currentUser.username %>" class="btn btn-secondary py-2 px-3">내 정보</a></p>
+                                            <p class="button-custom order-lg-last mb-0"><a href="/logout" class="btn btn-secondary py-2 px-3">로그아웃</a></p>
+                                            <% } else { %>
+                                                <p class="button-custom order-lg-last mb-0"><a href="/login" class="btn btn-secondary py-2 px-3">로그인</a></p>
+                                                <p class="button-custom order-lg-last mb-0"><a href="../users/new" class="btn btn-secondary py-2 px-3">회원가입</a></p>
+                                            <% } %>       
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container" >
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+                                <div class="container">
+                                    <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+                                        <div class="col-lg-2 pr-4 align-items-center">
+                                            <a class="navbar-brand" href="/">DA<span>ON</span></a>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </nav>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                     aria-expanded="false">의학 자료실</a>
+                                    <ul class="dropdown-menu" style="width:300px;">
+                                        <li class="nav-item"><a class="nav-link" href="http://localhost/wiki/index.php/%EB%8B%A4%EC%98%A8_%EC%9D%98%ED%95%99%EC%82%AC%EC%A0%84">의학사전</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../posts/index">해외 자료 번역</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                     aria-expanded="false">커뮤니티</a>
+                                    <ul class="dropdown-menu" style="width:300px;">
+                                        <li class="nav-item"><a class="nav-link" href="../posts1/index">질환별 커뮤니티</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../chat">1:1 채팅</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                     aria-expanded="false">일정</a>
+                                    <ul class="dropdown-menu" style="width:300px;">
+                                        <li class="nav-item"><a class="nav-link" href="../calendar">다온 캘린더</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../schedule">나의 스케줄</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                     aria-expanded="false">임상지원</a>
+                                    <ul class="dropdown-menu" style="width:300px;">
+                                        <li class="nav-item"><a class="nav-link" href="../application">임상 신청하기</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../search">환자 공개 프로필</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                     aria-expanded="false">의료서비스</a>
+                                <ul class="dropdown-menu" style="width:300px;"> 
+                                <li class="nav-item"><a class="nav-link" href="../posts/medicine">복용 중인 약 체크하기</a></li>
+                                <li class="nav-item"><a class="nav-link" href="../map">진료 가능 병원 검색</a></li>
+                                </ul>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!--================ End Header Menu Area =================-->
+    
